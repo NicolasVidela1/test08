@@ -1,0 +1,134 @@
+/* === Basic Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* === Fonts === */
+@font-face {
+  font-family: "Alte Bold";
+  src: url("../fonts/alte-haas-grotesk/AlteHaasGroteskBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alte Reg";
+  src: url("../fonts/alte-haas-grotesk/AlteHaasGroteskRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Enhanced";
+  src: url("../fonts/enhanced-dot-digital-7/enhanced-dot-digital-7.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === General Layout === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+
+  font-family: "Alte Reg", sans-serif;
+  background: #333333;
+  color: #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Main Content === */
+main {
+  display: block;
+  flex: 1;
+  padding: 15px 20px;
+}
+
+main h1 {
+  margin: 20px 0 10px 0;
+
+  font-family: "Alte Bold", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main p {
+  margin: 10px 0 20px 0;
+
+  font-family: "Alte Reg", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.avatar {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 15px auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px #00000066;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 8px 20px #00000080;
+}
+
+/* === Main Links === */
+main a {
+  display: block;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 15px;
+
+  font-family: "Enhanced", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #525252;
+  color: #cccccc;
+  text-decoration: none;
+
+  border: 1px solid #707070;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 15px #00000066;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+main a:hover {
+  background: #5f5f5f;
+  transform: translateY(-2px);
+}
+
+/* === Footer === */
+footer {
+  display: block;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+footer a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
